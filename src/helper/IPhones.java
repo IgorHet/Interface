@@ -1,9 +1,9 @@
 package helper;
 
 import service.Smartphones;
-import service.iOS;
+import service.IOS;
 
-public class iPhones implements Smartphones, iOS {
+public class IPhones implements Smartphones, IOS {
     @Override
     public void call() {
         System.out.println("iPhone calling...");

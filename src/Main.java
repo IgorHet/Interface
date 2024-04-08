@@ -1,22 +1,32 @@
 import helper.Androids;
-import helper.iPhones;
+import helper.IPhones;
+import service.LinuxOS;
+import service.Smartphones;
+import service.IOS;
 
 public class Main {
     public static void main(String[] args) {
-        // Створення екземпляра Androids
-        Androids androidPhone = new Androids();
+        // Створення екземплярів Androids, iPhones
+        Smartphones androidPhone = new Androids();
+        Smartphones iPhone = new IPhones();
+
+        LinuxOS androidOS = new Androids();
+        IOS iPhoneOS = new IPhones();
+
         // Виклик методів для Androids
         androidPhone.call();
         androidPhone.sms();
         androidPhone.internet();
-        androidPhone.runLinuxApp();
 
-        // Створення екземпляра iPhones
-        iPhones iPhone = new iPhones();
         // Виклик методів для iPhones
         iPhone.call();
         iPhone.sms();
         iPhone.internet();
-        iPhone.runiOSApp();
+
+        // Виклик методів для LinuxOS
+        androidOS.runLinuxApp();
+
+        // Виклик методів для iOS
+        iPhoneOS.runiOSApp();
     }
 }

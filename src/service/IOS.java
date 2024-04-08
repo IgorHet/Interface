@@ -1,5 +1,5 @@
 package service;
 
-public interface iOS {
+public interface IOS {
     void runiOSApp();
 }
